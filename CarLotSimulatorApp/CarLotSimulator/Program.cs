@@ -1,5 +1,5 @@
 ﻿using System;
-
+using CarLotSimulator;
 namespace CarLotSimulator
 {
     class Program
@@ -17,6 +17,37 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
+
+            // Custom Constructor
+            Car car1 = new Car(1999, "Honda", "Civic", true);
+
+            car1.EngineNoise("Vroom Vroom");
+            car1.HonkNoise("Beep Beep");
+
+            // Dot Notation
+            Car car2 = new Car();
+            car2.Year = 2005;
+            car2.Make = "Ford";
+            car2.Model = "Focus";
+            car2.Isdriveable = false;
+
+            car2.EngineNoise("pfttt");
+            car2.HonkNoise("honk honk");
+
+
+
+            // Object Initializer
+            Car car3 = new Car()
+            {
+                Year = 2017,
+                Make = "Toyota",
+                Model = "Corola",
+                Isdriveable = true,
+
+            };
+
+            car3.EngineNoise("hrhrh");
+            car3.HonkNoise("peeeeep");
 
             //*************BONUS*************//
 
