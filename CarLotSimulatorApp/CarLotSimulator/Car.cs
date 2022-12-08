@@ -9,22 +9,39 @@ namespace CarLotSimulator
 {
     internal class Car
     {
-        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        public Car()
+        {
+
+        }
+
+        
+        public Car(int year, string make, string model, bool isDriveable)
         {
             Year = year;
             Make = make;
             Model = model;
-            Enginenoise = engineNoise;
-            Honknoise = honkNoise;
             Isdriveable = isDriveable;
-
-            public static string EngineNoise(string noise)
-            {
-                return "Vroom Vroom";
-            }
-
-            Publ
         }
+        
+        public void EngineNoise(string noise)
+        {
+            Console.WriteLine(noise);
+        }
+
+        public void HonkNoise(string noise2)
+        {
+            Console.WriteLine(noise2);
+        }
+
+        public int Year { get; set; }
+        public string Make { get; set; }
+        public string Enginenoise { get; set; }
+        public string Model { get; set; }
+
+        public string Honknoise { get; set; }
+        public bool Isdriveable { get; set; }
+
+
 
 
 
