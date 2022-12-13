@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {
         public Car()
         {
-
+            CarLot.numberOfCars++;
         }
 
         
@@ -21,6 +21,8 @@ namespace CarLotSimulator
             Make = make;
             Model = model;
             Isdriveable = isDriveable;
+
+            CarLot.numberOfCars++;
         }
         
         public void EngineNoise(string noise)
@@ -41,6 +43,7 @@ namespace CarLotSimulator
         public string Honknoise { get; set; }
         public bool Isdriveable { get; set; }
 
+        
 
 
 

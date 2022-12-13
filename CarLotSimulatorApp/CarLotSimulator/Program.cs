@@ -18,14 +18,19 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
-            // Custom Constructor
+            // Paramaterized Constructor
+            CarLot carLot = new CarLot();
+
             Car car1 = new Car(1999, "Honda", "Civic", true);
+
+            carLot.ParkingLot.Add(car1);
 
             car1.EngineNoise("Vroom Vroom");
             car1.HonkNoise("Beep Beep");
 
             // Dot Notation
             Car car2 = new Car();
+            carLot.ParkingLot.Add(car2);
             car2.Year = 2005;
             car2.Make = "Ford";
             car2.Model = "Focus";
@@ -45,7 +50,7 @@ namespace CarLotSimulator
                 Isdriveable = true,
 
             };
-
+            carLot.ParkingLot.Add(car3);
             car3.EngineNoise("hrhrh");
             car3.HonkNoise("peeeeep");
 
@@ -59,6 +64,8 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            Console.WriteLine($"The number of cars in the lot is: {CarLot.numberOfCars}");
+
         }
     }
 }
